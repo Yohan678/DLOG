@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct DLOGApp: App {
+    @State private var homeSearchInput: String = ""
     var body: some Scene {
         WindowGroup {
             ContentView()
