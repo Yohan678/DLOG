@@ -12,11 +12,20 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             VStack {
+                HStack {
+                    Text("D-Log")
+                        .font(.system(size: 34, weight: .bold))
+                        .padding(.leading, 15)
+                    Spacer()
+                }
+                          
                 HomeSearchView(homeSearchInput: $homeSearchInput)
+                    .background(.white)
                 
                 HomeScrollView()
+                    .ignoresSafeArea()
             }
-            .navigationTitle("D-Log")
+            .background(Color.appBackground)
         }
     }
 }

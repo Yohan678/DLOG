@@ -9,14 +9,18 @@ import SwiftUI
 
 struct HomeScrollView: View {
     var body: some View {
-        ScrollView{
-            ForEach(0..<10, id: \.self) { index in
-                Text("\(index)")
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 100)
-                    .background(Color.blue.opacity(0.1))
-                    .cornerRadius(10)
-                    .padding(.horizontal)
+        ZStack {
+            Color.appBackground
+            
+            ScrollView{
+                ForEach(0..<10, id: \.self) { index in
+                    Text("\(index)")
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 100)
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                        .padding(.horizontal)
+                }
             }
         }
     }
