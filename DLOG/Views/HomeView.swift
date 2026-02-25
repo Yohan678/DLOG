@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
-    @Binding var homeSearchInput: String
+    let favSpot: [FavoriteSpot]
+    
+    @State var homeSearchInput: String
     var body: some View {
         NavigationStack {
             VStack {
@@ -22,7 +24,7 @@ struct HomeView: View {
                 HomeSearchView(homeSearchInput: $homeSearchInput)
                     .background(.white)
                 
-                HomeScrollView()
+                HomeScrollView(favSpot: favSpot)
                     .ignoresSafeArea()
             }
             .background(Color.appBackground)
@@ -31,6 +33,6 @@ struct HomeView: View {
 }
 
 #Preview {
-    @Previewable @State var homeSearchInput = ""
-    HomeView(homeSearchInput: $homeSearchInput)
+    let favSpot = FavoriteSpot.sampleData
+    HomeView(favSpot: favSpot, homeSearchInput: "")
 }

@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct HomeScrollView: View {
+    let favSpot: [FavoriteSpot]
+    
     var body: some View {
         ZStack {
             Color.appBackground
             
             ScrollView{
+                HomeCategoryScrollView(favSpot: favSpot)
+                    .padding()
+                
                 ForEach(0..<10, id: \.self) { index in
                     Text("\(index)")
                         .frame(maxWidth: .infinity)
@@ -27,5 +32,6 @@ struct HomeScrollView: View {
 }
 
 #Preview {
-    HomeScrollView()
+    let favSpot = FavoriteSpot.sampleData
+    HomeScrollView(favSpot: favSpot)
 }

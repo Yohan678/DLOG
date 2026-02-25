@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DB7D1DD42F4CF7B3007CB838 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DB7D1DD32F4CF7B3007CB838 /* FirebaseAuth */; };
+		DB7D1DD62F4CF7B3007CB838 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = DB7D1DD52F4CF7B3007CB838 /* FirebaseCore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		DB5026362F4BB3AE006AD701 /* DLOG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DLOG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +28,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB7D1DD62F4CF7B3007CB838 /* FirebaseCore in Frameworks */,
+				DB7D1DD42F4CF7B3007CB838 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +72,8 @@
 			);
 			name = DLOG;
 			packageProductDependencies = (
+				DB7D1DD32F4CF7B3007CB838 /* FirebaseAuth */,
+				DB7D1DD52F4CF7B3007CB838 /* FirebaseCore */,
 			);
 			productName = DLOG;
 			productReference = DB5026362F4BB3AE006AD701 /* DLOG.app */;
@@ -94,6 +103,9 @@
 			);
 			mainGroup = DB50262D2F4BB3AE006AD701;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DB79F8F92F4CBABE003D3BEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DB5026372F4BB3AE006AD701 /* Products */;
 			projectDirPath = "";
@@ -248,6 +260,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"$(SRCROOT)/DLOG/Preview Folder\"";
 				DEVELOPMENT_TEAM = 7DAYJG2LRN;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -292,6 +305,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"$(SRCROOT)/DLOG/Preview Folder\"";
 				DEVELOPMENT_TEAM = 7DAYJG2LRN;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -351,6 +365,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB79F8F92F4CBABE003D3BEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB7D1DD32F4CF7B3007CB838 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB79F8F92F4CBABE003D3BEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		DB7D1DD52F4CF7B3007CB838 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB79F8F92F4CBABE003D3BEE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DB50262E2F4BB3AE006AD701 /* Project object */;
 }
