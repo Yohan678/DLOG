@@ -1,0 +1,12 @@
+# Google Service Info (유출 방지)
+GoogleService-Info.plist
+
+# Xcode 공통 설정
+.DS_Store
+build/
+DerivedData/
+*.moved-aside
+*.xcuserstate
+
+# 개인 설정 파일
+xcuserdata/
