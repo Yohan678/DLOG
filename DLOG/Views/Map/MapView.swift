@@ -9,11 +9,22 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
+    let favSpots: [FavoriteSpot]
+    
     var body: some View {
-        MapView
+        Map {
+            
+            MapPolyline(coordinates: favSpots.map(\.coordinate))
+                .stroke(.blue, lineWidth: 2)
+            
+            ForEach(favSpots) { spot in
+                Marker(spot.title, coordinate: spot.coordinate)
+            }
+        }
     }
 }
 
 #Preview {
-    MapView()
+    let favSpot = FavoriteSpot.sampleData
+    MapView(favSpots: favSpot)
 }

@@ -18,6 +18,12 @@ struct MainView: View {
                     Image(systemName: "house")
                     Text("home")
                 }
+            
+            MapView(favSpots: favSpot)
+                .tabItem {
+                    Image(systemName: "map.fill")
+                    Text("map")
+                }
         }
     }
 }
