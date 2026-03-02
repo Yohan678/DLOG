@@ -13,5 +13,6 @@ extension FavoriteSpot {
         FavoriteSpot(title: "Starbucks", category: .cafe),
         FavoriteSpot(title: "Eden Park", category: .activities),
         FavoriteSpot(title: "Life 4 Cuts", category: .activities),
+        FavoriteSpot(title: "Taking photos", category: .etc)
     ]
 }

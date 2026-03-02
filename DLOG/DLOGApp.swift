@@ -23,7 +23,7 @@ struct DLOGApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HomeView(favSpot: favSpots, homeSearchInput: "")
+            MainView(favSpot: favSpots)
         }
     }
 }

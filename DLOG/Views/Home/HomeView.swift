@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeView: View {
     let favSpot: [FavoriteSpot]
     
-    @State var homeSearchInput: String
+    @Binding var homeSearchInput: String
     var body: some View {
         NavigationStack {
             VStack {
@@ -20,7 +20,7 @@ struct HomeView: View {
                         .padding(.leading, 15)
                     Spacer()
                 }
-                          
+                
                 HomeSearchView(homeSearchInput: $homeSearchInput)
                     .background(.white)
                 
@@ -33,6 +33,7 @@ struct HomeView: View {
 }
 
 #Preview {
+    @Previewable @State var homeSearchInput = ""
     let favSpot = FavoriteSpot.sampleData
-    HomeView(favSpot: favSpot, homeSearchInput: "")
+    HomeView(favSpot: favSpot, homeSearchInput: $homeSearchInput)
 }
